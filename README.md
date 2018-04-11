@@ -14,7 +14,9 @@ Reveal.js - Jupyter/IPython Slideshow Extension, also known as live_reveal. Quic
 Current build status
 ====================
 
-All platforms: [![Circle CI](https://circleci.com/gh/conda-forge/rise-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/rise-feedstock)
+Linux: [![Circle CI](https://circleci.com/gh/conda-forge/rise-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/rise-feedstock)
+OSX: [![TravisCI](https://travis-ci.org/conda-forge/rise-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/rise-feedstock)
+Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/rise-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/rise-feedstock/branch/master)
 
 Current release info
 ====================
