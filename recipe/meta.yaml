@@ -9,13 +9,14 @@ source:
   sha256: 514eb8784b8d4f7c2af4ba77055fd7a7d8365a87e55eb118d2f7a3ea400dbd7b
 
 build:
-  number: 3
+  number: 4
   script: python -m pip install --no-deps --ignore-installed .
 
 requirements:
   build:
     - python
     - pip
+    - notebook >=5.0.0
   run:
     - python
     - notebook >=5.0.0
