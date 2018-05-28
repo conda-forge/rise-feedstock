@@ -9,7 +9,7 @@ source:
   sha256: b34cc01ff85e47f386456ac4cb0659dcb2fb482c6db05feb5218d43580fea519
 
 build:
-  number: 5
+  number: 0
   script:
     - python -m pip install --no-deps --ignore-installed .
     - jupyter nbextension install --sys-prefix --py rise
@@ -17,7 +17,7 @@ build:
 requirements:
   build:
     - python
-    - pip
+    - pip >=10.0.1
     - notebook >=5.5.0
   run:
     - python
