@@ -1,4 +1,4 @@
-{% set version = "5.2.0" %}
+{% set version = "5.3.0" %}
 
 package:
   name: rise
@@ -6,10 +6,10 @@ package:
 
 source:
   url: https://pypi.io/packages/source/r/rise/rise-{{ version }}.tar.gz
-  sha256: 514eb8784b8d4f7c2af4ba77055fd7a7d8365a87e55eb118d2f7a3ea400dbd7b
+  sha256: b34cc01ff85e47f386456ac4cb0659dcb2fb482c6db05feb5218d43580fea519
 
 build:
-  number: 5
+  number: 0
   script:
     - python -m pip install --no-deps --ignore-installed .
     - jupyter nbextension install --sys-prefix --py rise
