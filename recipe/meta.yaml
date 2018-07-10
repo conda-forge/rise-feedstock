@@ -11,14 +11,13 @@ source:
     - setup_py.patch
 
 build:
-  noarch: python
-  number: 1
+  number: 0
   script:
     - python -m pip install --no-deps --ignore-installed .
     - jupyter nbextension install --sys-prefix --py rise
 
 requirements:
-  host:
+  build:
     - python
     - pip
     - pip >=10.0.1
