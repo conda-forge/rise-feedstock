@@ -7,8 +7,6 @@ package:
 source:
   url: https://pypi.io/packages/source/r/rise/rise-{{ version }}.tar.gz
   sha256: c113162ffd3cc0691cf8886b231e965a5f2752b8cd5cbf13de026993d18ca7f8
-  patches:
-    - setup_py.patch
 
 build:
   number: 0
@@ -19,7 +17,6 @@ build:
 requirements:
   build:
     - python
-    - pip
     - pip >=10.0.1
     - notebook >=5.5.0
   run:
