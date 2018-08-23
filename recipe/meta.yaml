@@ -7,19 +7,16 @@ package:
 source:
   url: https://pypi.io/packages/source/r/rise/rise-{{ version }}.tar.gz
   sha256: 81d29cb7db3af27d676a2f51afa592d39e6a35c39ee1261c099d84deb840e8c8
-  patches:
-    - setup_py.patch
 
 build:
   number: 0
   script:
-    - python -m pip install --no-deps --ignore-installed .
+    - "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv"
     - jupyter nbextension install --sys-prefix --py rise
 
 requirements:
   build:
     - python
-    - pip
     - pip >=10.0.1
     - notebook >=5.5.0
   run:
