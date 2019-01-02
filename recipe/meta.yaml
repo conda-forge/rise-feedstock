@@ -15,7 +15,7 @@ build:
     - jupyter nbextension install --sys-prefix --py rise
 
 requirements:
-  build:
+  host:
     - python
     - pip >=10.0.1
     - notebook >=5.5.0
