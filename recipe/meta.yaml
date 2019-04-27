@@ -1,4 +1,4 @@
-{% set version = "5.4.1" %}
+{% set version = "5.5.0" %}
 
 package:
   name: rise
@@ -6,13 +6,11 @@ package:
 
 source:
   url: https://pypi.io/packages/source/r/rise/rise-{{ version }}.tar.gz
-  sha256: 81d29cb7db3af27d676a2f51afa592d39e6a35c39ee1261c099d84deb840e8c8
+  sha256: 975770de4db26d68a0ffbfc46cbc56d8796383a98acfdd19921438f58beb0521
 
 build:
-  number: 1000
-  script:
-    - "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv"
-    - jupyter nbextension install --sys-prefix --py rise
+  number: 0
+  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
 
 requirements:
   host:
@@ -35,7 +33,7 @@ about:
   license_file: LICENSE.md
   summary: 'RISE: Live Reveal.js Jupyter/IPython Slideshow Extension'
   description:  Reveal.js - Jupyter/IPython Slideshow Extension, also known as live_reveal. Quickly turn your Jupyter Notebooks into a live presentation.  
-  doc_url: http://rise.readthedocs.io/en/latest
+  doc_url: http://rise.readthedocs.io
   dev_url: https://github.com/damianavila/RISE
 
 extra:
