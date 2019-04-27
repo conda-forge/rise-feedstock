@@ -1,1 +1,1 @@
-"${PREFIX}/bin/jupyter-nbextension" disable rise --py --sys-prefix
+"${PREFIX}/bin/jupyter-nbextension" uninstall rise --py --sys-prefix
