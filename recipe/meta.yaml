@@ -19,7 +19,6 @@ requirements:
     - notebook >=5.5.0
   run:
     - python
-    - jupyter
     - notebook >=5.5.0
 
 test:
