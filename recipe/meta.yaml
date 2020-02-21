@@ -1,4 +1,4 @@
-{% set version = "5.6.0" %}
+{% set version = "5.6.1" %}
 
 package:
   name: rise
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/r/rise/rise-{{ version }}.tar.gz
-  sha256: 2be45c3dbe27e63aae047c6a90be19798b6e17e9b6b0e25408b3c4f645658e26
+  sha256: 1343f068d01adc4dd0226d9b278ce93fc92f365d827431a57e8d5679eb39f4d6
 
 build:
   number: 0
