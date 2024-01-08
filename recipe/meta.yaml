@@ -1,16 +1,18 @@
+{% set name = "rise" %}
 {% set version = "5.7.1" %}
 
 package:
-  name: rise
+  name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/r/rise/rise-{{ version }}.tar.gz
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/rise-{{ version }}.tar.gz
   sha256: 641db777cb907bf5e6dc053098d7fd213813fa9a946542e52b900eb7095289a6
 
 build:
-  number: 2
-  script: {{ PYTHON }} -m pip install . --no-deps -vv
+  skip: true  # [py<310]
+  number: 3
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
 requirements:
   build:
@@ -18,19 +20,23 @@ requirements:
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
   host:
     - python
-    - pip >=10.0.1
-    - notebook >=5.5.0
+    - pip
+    - notebook >=6.0,<7.0
   run:
     - python
-    - notebook >=5.5.0
+    - notebook >=6.0,<7.0
 
 test:
   imports:
     - rise
+  commands:
+    - pip check
+  requires:
+    - pip
 
 about:
   home: https://github.com/damianavila/RISE
-  license: BSD 3-Clause
+  license: BSD-3-Clause
   license_family: BSD
   license_file: LICENSE.md
   summary: 'RISE: Live Reveal.js Jupyter/IPython Slideshow Extension'
@@ -44,3 +50,4 @@ extra:
     - sannykr
     - damianavila
     - parmentelat
+    - rxm7706
