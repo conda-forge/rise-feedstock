@@ -21,6 +21,7 @@ requirements:
   host:
     - python
     - pip
+    - setuptools
     - notebook >=6.0,<7.0
   run:
     - python
