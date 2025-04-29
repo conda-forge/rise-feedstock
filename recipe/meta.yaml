@@ -6,7 +6,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/rise-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/rise-{{ version }}.tar.gz
   sha256: 641db777cb907bf5e6dc053098d7fd213813fa9a946542e52b900eb7095289a6
 
 build:
